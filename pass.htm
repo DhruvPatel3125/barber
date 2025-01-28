@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="pass.css">
+    <title>Login form</title>
+</head>
+
+<body>
+    <section>
+        <form action="/barber/index.html" onsubmit="return func()">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="username" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <i class="fa-solid fa-lock"></i>
+                <input type="Password" id="password">
+                <label for="">Password</label>
+            </div>
+
+            <div class="forget">
+                <label for=""><input type="checkbox">Remember me</label>
+                <a href="#">Forget password</a>
+            </div>
+
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't Have An Acount <a href="#">Register</a></p>
+            </div>
+        </form>
+    </section>
+    <script>
+
+        function func() {
+            let email = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+            if (email == 'sujal5@gmail.com' && pass == '1234') {
+                alert("success full!!")
+                return true;
+            }
+            else {
+                alert("Wrong password");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
